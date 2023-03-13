@@ -1,0 +1,73 @@
+{
+	"manifestVersion": 5,
+	"id": "INSERT_YOUR_ID_HERE_FROM_ADOBE_CONSOLE",
+	"name": "UXP Vue 3 Plugin",
+	"version": "1.0.0",
+	"main": "index.html",
+	"host": {
+		"app": "PS",
+		"minVersion": "23.3.0",
+		"data": {
+			"apiVersion": 2
+		}
+	},
+	"entrypoints": [
+		{
+			"type": "panel",
+			"id": "vue3panel",
+			"label": {
+				"default": "Vue 3 Panel"
+			},
+			"minimumSize": {
+				"width": 300,
+				"height": 500
+			},
+			"maximumSize": {
+				"width": 300,
+				"height": 700
+			},
+			"preferredDockedSize": {
+				"width": 300,
+				"height": 500
+			},
+			"preferredFloatingSize": {
+				"width": 300,
+				"height": 500
+			},
+			"icons": [
+				{
+					"width": 23,
+					"height": 23,
+					"path": "icons/dark.png",
+					"scale": [1, 2],
+					"theme": ["darkest", "dark", "medium"]
+				},
+				{
+					"width": 23,
+					"height": 23,
+					"path": "icons/light.png",
+					"scale": [1, 2],
+					"theme": ["lightest", "light"]
+				}
+			]
+		}
+	],
+	"icons": [
+		{
+			"width": 23,
+			"height": 23,
+			"path": "icons/dark.png",
+			"scale": [1, 2],
+			"theme": ["dark", "darkest"],
+			"species": ["generic"]
+		},
+		{
+			"width": 23,
+			"height": 23,
+			"path": "icons/light.png",
+			"scale": [1, 2],
+			"theme": ["lightest", "light"],
+			"species": ["generic"]
+		}
+	]
+}
