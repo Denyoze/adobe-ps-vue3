@@ -9,7 +9,7 @@
 1. ```yarn``` - install all packages
 2. ```yarn build``` - build 
 3. Add ```manifest.json``` from the ```dist``` folder to Adobe UXP Developer Tool (Add Plugin -> Select manifest.json)
-4. Open Adobe XD
+4. Open Photoshop
 5. Load plugin (from Adobe UXP Developer Tool)
 6. Write your plugin code
 
