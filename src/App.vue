@@ -1,10 +1,5 @@
 <template>
-	<div id="plugin">
-		<sp-button @click="inc">Hello, Vue!</sp-button>
-		<sp-progressbar
-			:max="myValueMax"
-			:value="myValue"></sp-progressbar>
-	</div>
+	<h1>This is App.vue!</h1>
 </template>
 
 <script lang="ts">
@@ -12,20 +7,6 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
 	name: "App",
-	data() {
-		return {
-			myValue: 0,
-			myValueMax: 10,
-		};
-	},
-	methods: {
-		inc() {
-			this.myValue++;
-			if (this.myValue > this.myValueMax) {
-				this.myValue = 0;
-			}
-		},
-	},
 });
 </script>
 

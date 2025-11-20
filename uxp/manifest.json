@@ -11,6 +11,13 @@
 			"apiVersion": 2
 		}
 	},
+
+	"requiredPermissions": {
+		"network": {
+			"domains": ["localhost", "127.0.0.1"]
+		}
+	},
+
 	"entrypoints": [
 		{
 			"type": "panel",
@@ -33,25 +40,10 @@
 			"preferredFloatingSize": {
 				"width": 300,
 				"height": 500
-			},
-			"icons": [
-				{
-					"width": 23,
-					"height": 23,
-					"path": "icons/dark.png",
-					"scale": [1, 2],
-					"theme": ["darkest", "dark", "medium"]
-				},
-				{
-					"width": 23,
-					"height": 23,
-					"path": "icons/light.png",
-					"scale": [1, 2],
-					"theme": ["lightest", "light"]
-				}
-			]
+			}
 		}
 	],
+
 	"icons": [
 		{
 			"width": 23,
