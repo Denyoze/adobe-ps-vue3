@@ -2,7 +2,6 @@
 
 ## Directories
 * ```src``` - source code with the main.js file + Vue files
-* ```layout``` - ```plugin.html``` lives here
 * ```uxp``` - UXP manifest file and icons here
 
 ## How to start
