@@ -1,18 +1,21 @@
-<template>
-	<h1>This is App.vue!</h1>
-</template>
-
-<script lang="ts">
-import { defineComponent } from "vue";
-
-export default defineComponent({
-	name: "App",
-});
+<script setup lang="ts">
+import { RouterView } from "vue-router";
 </script>
 
-<style lang="css" scoped>
-div#plugin > * {
-	margin: 10px 0px;
+<template>
+	<suspense>
+		<template #default>
+			<RouterView />
+		</template>
+		<template #fallback>
+			<p>Loading...</p>
+		</template>
+	</suspense>
+</template>
+
+<style lang="scss">
+main {
+	padding: 16px;
 	width: 100%;
 }
 </style>

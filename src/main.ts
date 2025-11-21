@@ -1,6 +1,11 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import useUxpHotreload from "./useUxpHotreload";
+import useUxpHotReload from "./useUxpHotReload";
+import router from "./router";
 
-useUxpHotreload();
-createApp(App).mount("main");
+useUxpHotReload();
+
+const app = createApp(App);
+
+app.use(router);
+app.mount("main");
