@@ -5,8 +5,10 @@ import { fileURLToPath, URL } from "node:url";
 import uxpHotReload from "./devtools/vite-plugins/uxp-hot-reload";
 import uxpIndexFix from "./devtools/vite-plugins/uxp-index-fix";
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
 	plugins: [
+		uxpIndexFix(),
+
 		vue({
 			template: {
 				compilerOptions: {
@@ -15,12 +17,12 @@ export default defineConfig({
 				}
 			}
 		}),
-		
-		uxpIndexFix(),
-		uxpHotReload({
-			// port: 1337
-		})
-	],
+
+		mode !== "production" &&
+			uxpHotReload({
+				// port: 1337
+			})
+	].filter(Boolean),
 
 	publicDir: "uxp",
 
@@ -62,5 +64,4 @@ export default defineConfig({
 			"@": fileURLToPath(new URL("./src", import.meta.url))
 		}
 	}
-});
-
+}));
